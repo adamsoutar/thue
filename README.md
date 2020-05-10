@@ -4,7 +4,7 @@ An interpreter for the [Thue esolang](https://esolangs.org/wiki/Thue)
 
 ## Run it
 
-Grab a release, run it with
+Grab a [release](https://github.com/adamsoutar/thue/releases), run it with
 
 ```bash
 ./thue program.th
