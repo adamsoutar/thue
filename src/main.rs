@@ -1,10 +1,12 @@
 mod rules;
 mod parser;
+mod interpreter;
 
 fn main() {
-    parser::parse(String::from("
+    let prog = parser::parse(String::from("
 .::=~Hello, world!
 ::=
 .
 "));
+    interpreter::run_program(prog);
 }
