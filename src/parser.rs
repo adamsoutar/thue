@@ -13,16 +13,17 @@ pub fn parse (s: String) -> ThueProgram {
 
     let mut inp = false;
     for l in s.lines() {
-        if l.trim() == "" {
+        let ln = l.trim();
+        if ln == "" {
             continue
         }
 
         if inp {
-            tp.input = String::from(l);
+            tp.input = String::from(ln);
             break;
         }
 
-        let parts: Vec<&str> = l.split("::=").collect();
+        let parts: Vec<&str> = ln.split("::=").collect();
         if parts.len() != 2 {
             panic!("Each line must have exactly one ::=")
         }
